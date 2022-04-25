@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css" type="text/css"> -->
+    <title>Submit Your Cheque</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        
+        background-color: rgb(118, 115, 115);
+        background-size: 280%;
+        background-position: -400px 0px;
+    }
+    div.main{
+        width: 400px;
+        margin: 100px auto 0px auto;
+    }
+    h2{
+        text-align: center;
+        padding: 20px;
+        font-family: sans-serif;
+    
+    }
+    div.register{
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        font-size: 18px;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255, 255, 0.3);
+        box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+        color: #fff;
+    }
+    form#register{
+        margin: 40px;
+    }
+    label{
+        font-family: sans-serif;
+        font-size: 18px;
+        font-style: italic ;
+    }
+    input#name{
+        width: 300px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        outline: 0;
+        padding: 7px;
+        background-color: #fff;
+        box-shadow: inset 1px 1px 5px  rgba(0,0,0,0.3);
+    }
+    input#submit{
+        width: 200px;
+        padding: 7px;
+        font-size: 16px;
+        font-family: sans-serif;
+        font-weight: 600;
+        border: none;
+        border-radius: 3px;
+        background-color: rgba(133, 92, 67, 0.8);
+        color: #fff;
+        cursor: pointer;
+        border: 1px solid rgba(255,255,255,0.3);
+        box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="register">
+            <h2>Submit Here</h2>
+            <form id="register" method="POST">
+                <label for="">Name : </label>
+                <br>
+                <input type="text" name="fname" id="name" placeholder="Enter your full name">
+                <br><br>
+                <label for="">Account Number :</label>
+                <br>
+                <input type="number" name="Accno" id="name" placeholder="your Account number">
+                <br><br>
+                <label for="">Enter IFSC Code:</label>
+                <br>
+                <input type="text" name="IFSC" placeholder="Your IFSC Code">
+                <br><br>
+                <label for="">Enter Amount :</label>
+                <br>
+                <input type="number" name="Amount" id="name" placeholder="Enter Amount">
+                <br><br>
+            <label for="">Choose Your Cheque Bank Name :</label>
+            <select name="BANK">
+                <option value="HDFC Bank ">HDFC Bank</option>
+                <option value="ICICI Bank">ICICI Bank</option>
+                <option value="Axis Bank">Axis Bank</option>
+                <option value="State Bank of India (SBI)">State Bank of India (SBI)</option>
+                <option value="Punjab National Bank">Punjab National Bank</option>
+                <option value="Yes Bank">Yes Bank</option>
+                <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+                <option value="IndusInd Bank">IndusInd Bank</option>
+                <option value="South Indian Bank">South Indian Bank</option>
+                <option value="City Union Bank">City Union Bank</option>
+                <option value="IDBI Bank">IDBI Bank</option>
+                <option value="Union Bank of India">Union Bank of India</option>
+                <option value="Central Bank of India">Central Bank of India</option>
+                <option value="Bank of Baroda">Bank of Baroda</option>
+                <option value="Bank of Maharashtra">Bank of Maharashtra</option>
+            </select>
+            <br><br>
+            <label for="">Upload Cheque Image</label>
+            <input type="file" class="file-upload-input" name="" onchange="readURL(this)" accept="image/">
+            <br><br>
+            <input type="checkbox" value="agree" name="">I Agree.
+            <input type="checkbox" value="privecy and policy" name="">Privacy or policy.
+            <br><br>
+            <input type="submit" value="submit" id="submit">
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
